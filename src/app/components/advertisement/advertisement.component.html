@@ -1,0 +1,50 @@
+<div class="flex flex-col items-center justify-center pt-20" @fadeIn>
+  <h2 class="uppercase text-center mb-4 font-bold text-4xl">
+    Happening at SoA
+  </h2>
+  <div
+    class="second-section bg-gradient-to-r from-pink-400 to-yellow-300 h-64 w-full max-w-4xl p-4"
+  >
+    <h3 class="text-center">
+      <a
+        href="https://www.art.yale.edu/news/visiting-artist-lectures/fall-2024"
+        class="hover:text-gray-300 font-bold"
+      >
+        For up-to-date information from the university, visit Yale’s COVID-19
+        website > &gt;
+      </a>
+    </h3>
+    <h4 class="text-center">
+      <a
+        href="https://www.art.yale.edu/news/visiting-artist-lectures/spring-2024"
+        class="hover:text-gray-300 font-bold"
+      >
+        For up-to-date information from the university, visit Yale’s COVID-19
+        website Spring 2024 archive > &gt;
+      </a>
+    </h4>
+    <hr class="my-4" />
+    <h3 class="text-center">
+      <a
+        href="https://www.art.yale.edu/exhibitions"
+        class="hover:text-gray-300 font-bold"
+      >
+        Fall 2024 exhibitions + schedule here > &gt;
+      </a>
+    </h3>
+    <div class="flex justify-center mt-3">
+      <button
+        class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-black-600"
+        (click)="toggleLastEditedInfo()"
+        @buttonBounce
+      >
+        Editor Details
+      </button>
+    </div>
+
+    <div *ngIf="showLastEditedInfo" class="mt-4 text-gray-700" @fadeInOut>
+      <p><strong>Last edited by:</strong> {{ lastEditedInfo.editorName }}</p>
+      <p><strong>Edit access:</strong> {{ lastEditedInfo.accessLevel }}</p>
+    </div>
+  </div>
+</div>

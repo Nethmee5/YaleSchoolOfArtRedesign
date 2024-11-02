@@ -1,0 +1,19 @@
+.bg-indigo-50 { background-color: #eef2ff; }
+.bg-indigo-600 { background-color: #4f46e5; }
+.text-indigo-800 { color: #3730a3; }
+.border-l-4 { border-left-width: 4px; }
+.border-t-4 { border-top-width: 4px; }
+
+:host {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  @media (min-width: 768px) {
+    :host {
+      padding-top: 100px; 
+    }
+  }
+  

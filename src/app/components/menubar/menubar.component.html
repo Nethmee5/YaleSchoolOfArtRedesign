@@ -1,0 +1,15 @@
+<div
+  class="fixed inset-y-0 left-0 w-64 bg-gray-900 text-white transform -translate-x-full transition-transform duration-300 z-20"
+  [class.translate-x-0]="sidebarOpen">
+  <button class="text-white p-2 m-2" (click)="toggleSidebar()">✖</button>
+
+  <nav class="mt-8 space-y-4 px-4">
+    <a routerLink="/home" class="block px-4 py-2 hover:bg-gray-700">Home</a>
+    <a routerLink="/about" class="block px-4 py-2 hover:bg-gray-700">About the School</a>
+    <a routerLink="/apply" class="block px-4 py-2 hover:bg-gray-700">Apply to the School</a>
+    <a routerLink="/exhibitions" class="block px-4 py-2 hover:bg-gray-700">Exhibitions</a>
+    <a routerLink="/publications" class="block px-4 py-2 hover:bg-gray-700">Publications</a>
+    <a routerLink="/news" class="block px-4 py-2 hover:bg-gray-700">News</a>
+    <a routerLink="/events" class="block px-4 py-2 hover:bg-gray-700">Public Events</a>
+  </nav>
+</div>

@@ -1,0 +1,35 @@
+<section
+  class="h-screen bg-cover bg-center flex items-center justify-center text-center text-black relative"
+  style="background-image: url('/assets/hero-bg.jpg')"
+>
+  <div class="absolute inset-0 bg-black opacity-70"></div>
+
+  <div class="px-4 sm:px-8 lg:px-16 max-w-screen-md relative z-10">
+    <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-white">
+      Yale School of Art
+    </h1>
+    <p class="text-base sm:text-lg lg:text-xl mt-4 text-white">
+      Creativity, Innovation, and Artistry
+    </p>
+    <p class="mt-4 text-white">
+      The Yale School of Art is a graduate school that confers MFAs in Graphic
+      Design, Painting/Printmaking, Photography, and Sculpture; and offers
+      undergraduate-level art courses to Yale College students. Our website
+      exists as an ongoing collaborative experiment in digital publishing and
+      information sharing. It functions as a wiki—all members of the School of
+      Art community have the ability to add new, and edit most existing content.
+    </p>
+
+    <button
+      class="mt-6 px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-600"
+      (click)="toggleLastEditedInfo()"
+    >
+      Editor Details
+    </button>
+
+    <div *ngIf="showLastEditedInfo" class="mt-4 text-gray-700">
+      <p><strong>Last edited by:</strong> {{ lastEditedInfo.editorName }}</p>
+      <p><strong>Edit access:</strong> {{ lastEditedInfo.accessLevel }}</p>
+    </div>
+  </div>
+</section>

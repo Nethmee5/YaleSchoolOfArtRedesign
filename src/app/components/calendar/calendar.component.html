@@ -1,0 +1,49 @@
+<div class="p-4 md:p-6 w-full max-w-screen-md mx-auto pt-20">
+  <div class="flex justify-between items-center mb-4">
+    <button
+      (click)="previousPage()"
+      class="text-indigo-500 hover:text-indigo-700 font-medium"
+      [disabled]="currentPage === 0"
+    >
+      Previous Events
+    </button>
+    <h2 class="uppercase text-center mb-4 font-bold text-4xl">
+      on the calendar
+    </h2>
+    <button
+      (click)="nextPage()"
+      class="text-indigo-500 hover:text-indigo-700 font-medium"
+      [disabled]="(currentPage + 1) * eventsPerPage >= events.length"
+    >
+      More Events
+    </button>
+  </div>
+
+  <div
+    *ngFor="let event of currentEvents"
+    class="p-4 mb-4 bg-white rounded-lg shadow-md border-l-4"
+    [ngClass]="currentStyleClass"
+  >
+    <div class="flex items-center justify-between mb-1">
+      <div class="text-sm font-semibold" [ngClass]="dateTextClass">
+        {{ event.date }}
+      </div>
+      <div class="text-sm" [ngClass]="timeTextClass">{{ event.time }}</div>
+    </div>
+    <h3 class="text-lg font-bold" [ngClass]="titleTextClass">
+      {{ event.title }}
+    </h3>
+    <p class="text-sm mt-1" [ngClass]="locationTextClass">
+      {{ event.location }}
+    </p>
+    <p class="text-sm mt-2" [ngClass]="descriptionTextClass">
+      {{ event.description }}
+    </p>
+  </div>
+
+  <button
+    class="w-full bg-orange-500 text-white py-3 rounded-lg mt-4 font-semibold hover:bg-orange-600 transition duration-200 ease-in-out"
+  >
+    Subscribe to Calendar
+  </button>
+</div>

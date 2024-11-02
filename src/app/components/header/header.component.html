@@ -1,0 +1,155 @@
+<header
+  class="fixed top-0 left-0 w-full flex items-center justify-between p-4 bg-gray-900 text-white z-50"
+>
+  <div class="logo flex items-center space-x-2">
+    <img
+      src="../../../assets/logo.png"
+      alt="Yale School of Art Logo"
+      class="h-8 sm:h-10"
+    />
+    <span>Yale School of Art</span>
+  </div>
+
+  <div class="flex items-center space-x-4">
+    <button
+      class="flex items-center text-white space-x-1 lg:hidden p-0 m-0"
+      (click)="toggleMenuBar()"
+    >
+      <img src="../../../assets/menu.png" class="h-4" />
+      <span>Menu</span>
+    </button>
+
+    <nav class="hidden sm:flex items-center space-x-4">
+      <a routerLink="/programs" class="hover:text-gray-300 cursor-pointer"
+        >Home</a
+      >
+      <a routerLink="/admissions" class="hover:text-gray-300 cursor-pointer"
+        >About the School</a
+      >
+      <a routerLink="/events" class="hover:text-gray-300 cursor-pointer"
+        >Apply to the School</a
+      >
+      <a routerLink="/events" class="hover:text-gray-300 cursor-pointer"
+        >Exhibitions</a
+      >
+      <a routerLink="/events" class="hover:text-gray-300 cursor-pointer"
+        >Publications</a
+      >
+      <a routerLink="/events" class="hover:text-gray-300 cursor-pointer"
+        >News</a
+      >
+      <a routerLink="/events" class="hover:text-gray-300 cursor-pointer"
+        >Public Events</a
+      >
+    </nav>
+  </div>
+
+  <div class="relative sm:hidden">
+    <button class="text-white p-0 m-0" (click)="toggleMenu()">☰</button>
+    <div
+      *ngIf="menuOpen"
+      class="absolute top-full mt-2 right-0 flex flex-col space-y-2 bg-gray-900 p-4 rounded shadow-lg cursor-pointer"
+    >
+      <a routerLink="/programs" class="hover:text-gray-300 cursor-pointer"
+        >Home</a
+      >
+      <a
+        routerLink="https://www.art.yale.edu/about"
+        class="hover:text-gray-300 cursor-pointer"
+        >About the School</a
+      >
+      <a
+        routerLink="https://www.art.yale.edu/apply"
+        class="hover:text-gray-300 cursor-pointer"
+        >Apply to the School</a
+      >
+      <a
+        routerLink="https://www.art.yale.edu/exhibitions"
+        class="hover:text-gray-300 cursor-pointer"
+        >Exhibitions</a
+      >
+      <a
+        routerLink="https://www.art.yale.edu/publications"
+        class="hover:text-gray-300 cursor-pointer"
+        >Publications</a
+      >
+      <a
+        routerLink="https://www.art.yale.edu/news"
+        class="hover:text-gray-300 cursor-pointer"
+        >News</a
+      >
+      <a
+        routerLink="https://www.art.yale.edu/public-events"
+        class="hover:text-gray-300 cursor-pointer"
+        >Public Events</a
+      >
+    </div>
+  </div>
+</header>
+
+<div
+  *ngIf="menuBarOpen"
+  class="overlay-container fixed inset-0 bg-gray-800 text-white z-40 p-8"
+>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <div>
+      <h3 class="text-2xl font-bold mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li>
+          <a href="#" class="hover:text-gray-300">Current Students &gt;</a>
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300">Faculty & Staff &gt;</a>
+        </li>
+        <li><a href="#" class="hover:text-gray-300">Wiki Sitemap &gt;</a></li>
+        <li><a href="#" class="hover:text-gray-300">Knowledgebase &gt;</a></li>
+        <li><a href="#" class="hover:text-gray-300">Facilities &gt;</a></li>
+        <li><a href="#" class="hover:text-gray-300">Courses &gt;</a></li>
+        <li><a href="#" class="hover:text-gray-300">Opportunities &gt;</a></li>
+        <li><a href="#" class="hover:text-gray-300">Resources &gt;</a></li>
+        <li>
+          <a href="#" class="hover:text-gray-300"
+            >School of Art in the World &gt;</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-bold mb-4">Newsletters, Calendars</h3>
+      <ul class="space-y-2">
+        <li>
+          <a href="#" class="hover:text-gray-300"
+            >Sign up for School of Art newsletters &gt;</a
+          >
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300">Community Calendar &gt;</a>
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300">Academic Calendar &gt;</a>
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300"
+            >Public Events Calendar &gt;</a
+          >
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-300"
+            >SoA in the World Calendar &gt;</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      Official School of Art COVID-19 Updates:
+      <a
+        href="https://campushealth.yale.edu/covid-19-information"
+        class="hover:text-gray-300"
+        >For up-to-date information from the university, visit Yale’s COVID-19
+        website >>&gt;</a
+      >
+    </div>
+  </div>
+</div>
